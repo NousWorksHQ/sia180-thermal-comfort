@@ -30,17 +30,17 @@ Open [example.html](example.html) in a browser for the interactive version.
 
 ## Input data formats
 
-### Room temperature – MSR logger CSV
+### Room temperature – `Klassenzimmer-2.OG.csv`
 
 Semicolon-separated with a header block. Data starts after the `*DATA` marker. Column order: `TIME ; RH ; T`
 
 ```
 *DATA
-2026-01-23 12:00:00.047;27.3;21.4
-2026-01-23 12:05:00.047;27.5;21.5
+2026-01-28 00:00:00.047;46.5;17.4
+2026-01-28 00:05:00.047;46.5;17.4
 ```
 
-### Outdoor temperature – METEO BMS export
+### Outdoor temperature – `METEO-Aussentemperaturen.csv`
 
 Semicolon-separated with 3 header rows. Date format: `"DD.DDMM.YY HH:MM"` (e.g. `"23.2301.26 14:00"` = 2026-01-23 14:00).
 
