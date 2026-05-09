@@ -84,8 +84,8 @@ from sia180_thermal_comfort import (
     plot_sia180,
 )
 
-df_room    = parse_room_temp_csv("path/to/room_logger.csv")
-df_outdoor = parse_outdoor_temp_csv("path/to/meteo_outdoor.csv")
+df_room    = parse_room_temp_csv("data/Klassenzimmer-2.OG.csv")
+df_outdoor = parse_outdoor_temp_csv("data/METEO-Aussentemperaturen.csv")
 
 data = compute_comfort_data(df_room, df_outdoor)
 
