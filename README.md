@@ -100,8 +100,8 @@ fig.show()
 
 | Function | Description |
 |----------|-------------|
-| `parse_room_temp_csv(filepath)` | Parse MSR logger CSV → `DataFrame[time, temp_room]` |
-| `parse_outdoor_temp_csv(filepath)` | Parse METEO BMS CSV → `DataFrame[time, temp_outdoor]` |
+| `parse_room_temp_csv(filepath)` | Parse Logger CSV → `DataFrame[time, temp_room]` |
+| `parse_outdoor_temp_csv(filepath)` | Parse METEO CSV → `DataFrame[time, temp_outdoor]` |
 | `compute_comfort_data(df_room, df_outdoor)` | Aggregate hourly, apply 48-h rolling mean, merge, assign seasons |
 | `plot_sia180(data, title)` | Return interactive `plotly.graph_objects.Figure` |
 | `get_season(month)` | Return `"Winter"` / `"Spring"` / `"Summer"` / `"Fall"` for a month number |
