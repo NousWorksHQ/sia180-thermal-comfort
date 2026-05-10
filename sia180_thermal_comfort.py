@@ -26,7 +26,7 @@ def get_season(month: int) -> str:
 # ── CSV parsers ───────────────────────────────────────────────────────────────
 
 def parse_room_temp_csv(filepath) -> pd.DataFrame:
-    """Parse MSR logger CSV (semicolon-separated with *DATA section header).
+    """Parse Logger CSV (semicolon-separated with *DATA section header).
 
     Expected column order after *DATA: TIME ; RH ; T
     Returns DataFrame with columns [time, temp_room].
@@ -57,7 +57,7 @@ def parse_room_temp_csv(filepath) -> pd.DataFrame:
 
 
 def _parse_meteo_date(date_str: str) -> pd.Timestamp:
-    """Parse BMS date format 'DD.DDMM.YY HH:MM' (e.g. '23.2301.26 00:00')."""
+    """Parse METEO date format 'DD.DDMM.YY HH:MM' (e.g. '23.2301.26 00:00')."""
     s = str(date_str).strip('"').strip()
     date_part, time_part = s.split(" ")
     day   = date_part[0:2]
@@ -67,7 +67,7 @@ def _parse_meteo_date(date_str: str) -> pd.Timestamp:
 
 
 def parse_outdoor_temp_csv(filepath) -> pd.DataFrame:
-    """Parse METEO BMS export (semicolon-separated, 3-row header, quoted dates).
+    """Parse METEO export (semicolon-separated, 3-row header, quoted dates).
 
     Returns DataFrame with columns [time, temp_outdoor].
     """
